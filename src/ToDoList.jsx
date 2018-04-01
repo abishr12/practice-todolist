@@ -32,14 +32,15 @@ class ToDoList extends Component {
 
   deleteItem(key) {
     let {tasks} = this.state
-    const filteredItems = tasks.filter(objKey => objKey === key)
+    const filteredItems = tasks.filter(task => task.key !== key)
 
     this.setState({tasks: filteredItems})
 
   }
   addItem(event) {
     event.preventDefault();
-    let {newTask} = this.state
+    
+    let newTask = this.a.value
 
     let newTaskObj = {
       key: Date.now(),
@@ -62,7 +63,7 @@ class ToDoList extends Component {
           <input
             onChange={this.handleChange}
             name='newTask'
-            value={this.state.newTask}
+            ref={node => this.a = node}
             className="form-control"
             placeholder='Enter Task Here'/>
           <button className="btn btn-success">Add Task</button>
