@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToDoList/> shallow rendering matches the snapshot 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="form-control"
+      name="newTask"
+      onChange={[Function]}
+      placeholder="Enter Task Here"
+    />
+    <button
+      className="btn btn-success"
+    >
+      Add Task
+    </button>
+  </form>
+  <ToDoItems
+    deleteItem={[Function]}
+    entries={Array []}
+  />
+</div>
+`;

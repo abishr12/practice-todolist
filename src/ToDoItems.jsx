@@ -1,10 +1,9 @@
 import React from 'react';
 
-const ToDoItems = props => {
+const ToDoItems = ({entries, deleteItem}) => {
     
-  let fullList = props
-    .entries
-    .map(entry => <li onClick={()=> props.deleteItem(entry.key)} key={entry.key}>{entry.task}</li>)
+  let fullList = entries
+    .map(entry => <li onClick={()=> deleteItem(entry.key)} key={entry.key}>{entry.task}</li>)
 
   return (
     <ul>
